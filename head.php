@@ -38,11 +38,11 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
         </ul>
         <nav class="lnb">
             <ul>
-                <li><a href="#">인생미술관</a></li>
-                <li><a href="#">프로그램 소개</a></li>
-                <li><a href="#">수강문의</a></li>
-                <li><a href="#">갤러리</a></li>
-                <li><a href="#">커뮤니티</a></li>
+                <li><a href="/sub/intro/s1.php">인생미술관</a></li>
+                <li><a href="/sub/program/s1.php">프로그램 소개</a></li>
+                <li><a href="/bbs/board.php?bo_table=counsel&sca=체험수업">수강문의</a></li>
+                <li><a href="/bbs/board.php?bo_table=gallery&sca=작품소개">갤러리</a></li>
+                <li><a href="/bbs/board.php?bo_table=community&sca=공지사항">커뮤니티</a></li>
             </ul>
         </nav>
     </div>
@@ -50,5 +50,12 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
 <!-- } 상단 끝 -->
 
 <!-- 콘텐츠 시작 { -->
-<div id="wrapper">
+<?php
+$phpself = $_SERVER["PHP_SELF"]; 
+$searchName = "/bbs";
+if(strpos($phpself, $searchName) !== false) {  
+    $boWrap = 'bbs_wrap';
+}
+?>
+<div id="wrapper" class="<?php echo $boWrap ?>">
 

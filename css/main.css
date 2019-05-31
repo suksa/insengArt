@@ -1,3 +1,4 @@
+#footer {margin-top:0!important}
 .vis {position: relative;height: 640px;background: url(/img/main/vis_1.jpg) no-repeat center}
 .vis .sc_down {position: absolute;width: 57px;height: 34px;left: calc(50% - 28px);bottom: 70px;transform: translate(0,0);animation: Bounce_1 0.8s 0s infinite forwards alternate}
 
