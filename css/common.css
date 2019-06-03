@@ -17,7 +17,7 @@ body {}
 #lnb {float: right;margin: 100px 85px 0 0}
 #lnb > li {float: left;position: relative;}
 #lnb > li+li {margin: 0 0 0 40px}
-#lnb > li+li a {}
+#lnb > li.on > a {color:#a82d8d}
 #lnb > li > a {font-size: 18px;padding: 0 0 33px}
 #lnb > li.on .sub_mn {display: block}
 #lnb .sub_mn {position: absolute;top: calc(100% + 23px);left: calc(50% - 72px);display: none;border-top: 9px solid #be56a7}
