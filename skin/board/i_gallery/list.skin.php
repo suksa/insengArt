@@ -3,8 +3,21 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 
 // add_stylesheet('css 구문', 출력순서); 숫자가 작을 수록 먼저 출력됨
-add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0);
+add_stylesheet('<link rel="stylesheet" href="/css/sub.css">', 0);
+add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 1);
 ?>
+
+<div class="s_pg bo_pg s_<?php echo $bo_table ?>">
+    <div class="s_bnr"></div>
+    <ul class="p_location">
+        <li><img src="/img/sub/lo_home.jpg" alt=""></li>
+        <li><?php echo $board['bo_subject'] ?></li>
+        <?php if($sca){ ?>
+        <li><?php echo $sca ?></li>
+        <?php } ?>
+    </ul>
+    <h3 class="bo_sjt"><?php echo $board['bo_subject'] ?></h3>
+    <div class="contents">
 
 
 <!-- 게시판 목록 시작 { -->
@@ -98,7 +111,7 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
                             if($thumb['src']) {
                                 $img_content = '<img src="'.$thumb['src'].'" alt="'.$thumb['alt'].'" >';
                             } else {
-                                $img_content = '<span class="no_image">no image</span>';
+                                $img_content = '<span class="no_image"><img src="/img/common/noimg.jpg" alt=""></span>';
                             }
 
                             echo $img_content;
@@ -115,26 +128,10 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
                         <?php } ?>
                         <a href="<?php echo $list[$i]['href'] ?>" class="bo_tit">
                             <?php echo $list[$i]['subject'] ?>
-                            <?php if ($list[$i]['comment_cnt']) { ?><span class="sound_only">댓글</span><span class="cnt_cmt">+ <?php echo $list[$i]['wr_comment']; ?></span><span class="sound_only">개</span><?php } ?>
-                            <?php
-                            // if ($list[$i]['file']['count']) { echo '<'.$list[$i]['file']['count'].'>'; }
-
-                            if (isset($list[$i]['icon_new'])) echo rtrim($list[$i]['icon_new']);
-                            if (isset($list[$i]['icon_hot'])) echo rtrim($list[$i]['icon_hot']);
-                            //if (isset($list[$i]['icon_file'])) echo rtrim($list[$i]['icon_file']);
-                            //if (isset($list[$i]['icon_link'])) echo rtrim($list[$i]['icon_link']);
-                            if (isset($list[$i]['icon_secret'])) echo rtrim($list[$i]['icon_secret']);
-                             ?>
                          </a>
                     </div>
                     <div class="gall_name">
-                        <span class="sound_only">작성자 </span><span class="profile_img"><?php echo $list[$i]['name'] ?></span>
-                    </div>
-                    <div class="gall_info">
-                        <span class="sound_only">조회 </span><i class="fa fa-eye" aria-hidden="true"></i> <?php echo $list[$i]['wr_hit'] ?>
-                        <?php if ($is_good) { ?><span class="sound_only">추천</span><strong><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> <?php echo $list[$i]['wr_good'] ?></strong><?php } ?>
-                        <?php if ($is_nogood) { ?><span class="sound_only">비추천</span><strong><i class="fa fa-thumbs-o-down" aria-hidden="true"></i> <?php echo $list[$i]['wr_nogood'] ?></strong><?php } ?>
-                        <span class="gall_date"><span class="sound_only">작성일 </span><i class="fa fa-clock-o" aria-hidden="true"></i> <?php echo $list[$i]['datetime2'] ?></span>
+                        게시일 : <?php echo $list[$i]['datetime'] ?>
                     </div>
                 </div>
             </div>
@@ -152,7 +149,7 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
             <li><input type="submit" name="btn_submit" value="선택복사" onclick="document.pressed=this.value" class="btn btn_b01"></li>
             <li><input type="submit" name="btn_submit" value="선택이동" onclick="document.pressed=this.value" class="btn btn_b01"></li>
             <?php } ?>
-            <?php if ($list_href) { ?><li><a href="<?php echo $list_href ?>" class="btn_b01 btn">목록</a></li><?php } ?>
+            <!-- <?php if ($list_href) { ?><li><a href="<?php echo $list_href ?>" class="btn_b01 btn">목록</a></li><?php } ?> -->
             <?php if ($write_href) { ?><li><a href="<?php echo $write_href ?>" class="btn_b02 btn">글쓰기</a></li><?php } ?>
         </ul>
         <?php } ?>
@@ -260,3 +257,4 @@ function select_copy(sw) {
 </script>
 <?php } ?>
 <!-- } 게시판 목록 끝 -->
+</div></div>

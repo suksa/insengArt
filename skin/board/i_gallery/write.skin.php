@@ -2,8 +2,17 @@
 if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 
 // add_stylesheet('css 구문', 출력순서); 숫자가 작을 수록 먼저 출력됨
-add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0);
+add_stylesheet('<link rel="stylesheet" href="/css/sub.css">', 0);
+add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 1);
 ?>
+<div class="s_pg bo_pg s_<?php echo $bo_table ?>">
+    <div class="s_bnr"></div>
+    <ul class="p_location">
+        <li><img src="/img/sub/lo_home.jpg" alt=""></li>
+        <li><?php echo $board['bo_subject'] ?></li>
+        <li>글쓰기</li>
+    </ul>
+    <div class="contents">
 
 <section id="bo_w">
     <h2 class="sound_only"><?php echo $g5['title'] ?></h2>
@@ -167,7 +176,7 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
 
 
     <div class="btn_confirm write_div">
-        <a href="./board.php?bo_table=<?php echo $bo_table ?>" class="btn_cancel btn">취소</a>
+        <a href="javascript:history.go(-1)" class="btn_cancel btn">취소</a>
         <input type="submit" value="작성완료" id="btn_submit" accesskey="s" class="btn_submit btn">
     </div>
     </form>
@@ -259,3 +268,4 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
     </script>
 </section>
 <!-- } 게시물 작성/수정 끝 -->
+</div></div>

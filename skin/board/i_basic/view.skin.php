@@ -10,10 +10,10 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 1
 <div class="s_pg bo_pg s_<?php echo $bo_table ?>">
     <div class="s_bnr"></div>
     <ul class="p_location">
-        <li><a href="/"><img src="/img/sub/lo_home.jpg" alt=""></a></li>
-        <li><a href="#"><?php echo $board['bo_subject'] ?></a></li>
+        <li><img src="/img/sub/lo_home.jpg" alt=""></li>
+        <li><?php echo $board['bo_subject'] ?></li>
         <?php if($sca){ ?>
-        <li><a href="#"><?php echo $sca ?></a></li>
+        <li><?php echo $sca ?></li>
         <?php } ?>
     </ul>
     <div class="contents">

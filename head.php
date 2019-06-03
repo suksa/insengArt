@@ -32,9 +32,9 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
     <div class="wrapper">
         <h1 class="logo"><a href="/"><img src="/img/common/logo.png" alt="<?php echo $g5['title'] ?>"></a></h1>
         <ul class="gnb">
-            <li><a href="#"><img src="/img/main/gnb_ico.png" alt=""> 강사자료실</a></li>
-            <li><a href="#">체험수업 신청</a></li>
-            <li><a href="#">Q&A</a></li>
+            <li><a href="/bbs/board.php?bo_table=data&sca=수업자료"><img src="/img/main/gnb_ico.png" alt=""> 강사자료실</a></li>
+            <li><a href="/bbs/board.php?bo_table=counsel&sca=체험수업">체험수업 신청</a></li>
+            <li><a href="/bbs/board.php?bo_table=counsel&sca=Q%26A">Q&A</a></li>
         </ul>
         <nav class="lnb">
             <ul id="lnb">
@@ -44,8 +44,8 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
                     <a href="/bbs/board.php?bo_table=counsel&sca=체험수업">수강문의</a>
                     <div class="sub_mn">
                         <ul>
-                            <li><a href="#"">체험수업 신청</a></li>
-                            <li><a href="#"">Q&A</a></li>
+                            <li><a href="/bbs/board.php?bo_table=counsel&sca=체험수업"">체험수업 신청</a></li>
+                            <li><a href="/bbs/board.php?bo_table=counsel&sca=Q%26A">Q&A</a></li>
                         </ul>
                     </div>
                 </li>
@@ -53,8 +53,8 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
                     <a href="/bbs/board.php?bo_table=gallery&sca=작품소개">갤러리</a>
                     <div class="sub_mn">
                         <ul>
-                            <li><a href="#"">작품소개</a></li>
-                            <li><a href="#"">수업스케치</a></li>
+                            <li><a href="/bbs/board.php?bo_table=gallery&sca=작품소개">작품소개</a></li>
+                            <li><a href="/bbs/board.php?bo_table=gallery&sca=수업스케치">수업스케치</a></li>
                         </ul>
                     </div>
                 </li>
@@ -62,8 +62,8 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
                     <a href="/bbs/board.php?bo_table=community&sca=공지사항">커뮤니티</a>
                     <div class="sub_mn">
                         <ul>
-                            <li><a href="#"">공지사항</a></li>
-                            <li><a href="#"">인생미술관 소식</a></li>
+                            <li><a href="/bbs/board.php?bo_table=community&sca=공지사항">공지사항</a></li>
+                            <li><a href="/bbs/board.php?bo_table=community&sca=인생미술관+소식">인생미술관 소식</a></li>
                         </ul>
                     </div>
                 </li>

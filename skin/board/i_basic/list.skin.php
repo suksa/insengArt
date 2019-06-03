@@ -21,10 +21,10 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 1
 <div class="s_pg bo_pg s_<?php echo $bo_table ?>">
     <div class="s_bnr"></div>
     <ul class="p_location">
-        <li><a href="/"><img src="/img/sub/lo_home.jpg" alt=""></a></li>
-        <li><a href="#"><?php echo $board['bo_subject'] ?></a></li>
+        <li><img src="/img/sub/lo_home.jpg" alt=""></li>
+        <li><?php echo $board['bo_subject'] ?></li>
         <?php if($sca){ ?>
-        <li><a href="#"><?php echo $sca ?></a></li>
+        <li><?php echo $sca ?></li>
         <?php } ?>
     </ul>
     <h3 class="bo_sjt"><?php echo $board['bo_subject'] ?></h3>
@@ -86,10 +86,13 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 1
             <?php } ?>
             <th scope="col">번호</th>
             <th scope="col">제목</th>
-            <th scope="col">글쓴이</th>
-            <?php if ($is_good) { ?><th scope="col"><?php echo subject_sort_link('wr_good', $qstr2, 1) ?>추천 <i class="fa fa-sort" aria-hidden="true"></i></a></th><?php } ?>
-            <?php if ($is_nogood) { ?><th scope="col"><?php echo subject_sort_link('wr_nogood', $qstr2, 1) ?>비추천 <i class="fa fa-sort" aria-hidden="true"></i></a></th><?php } ?>
-            <th scope="col"><?php echo subject_sort_link('wr_datetime', $qstr2, 1) ?>날짜  <i class="fa fa-sort" aria-hidden="true"></i></a></th>
+            <th scope="col">
+                <?php if($bo_table == 'data' || $bo_table == 'counsel'){ ?>
+                작성자
+                <?php }else{ ?>
+                날짜
+                <?php } ?>
+            </th>
         </tr>
         </thead>
         <tbody>
@@ -141,11 +144,14 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 1
                 </div>
 
             </td>
-            <td class="td_name sv_use"><?php echo $list[$i]['name'] ?></td>
-            <?php if ($is_good) { ?><td class="td_num"><?php echo $list[$i]['wr_good'] ?></td><?php } ?>
-            <?php if ($is_nogood) { ?><td class="td_num"><?php echo $list[$i]['wr_nogood'] ?></td><?php } ?>
-            <td class="td_datetime"><?php echo $list[$i]['datetime2'] ?></td>
-
+            <td class="td_name sv_use">
+                <?php 
+                if($bo_table == 'data' || $bo_table == 'counsel'){
+                    echo $list[$i]['name'];
+                }else{
+                    echo $list[$i]['datetime'];
+                }?>
+            </td>
         </tr>
         <?php } ?>
         <?php if (count($list) == 0) { echo '<tr><td colspan="'.$colspan.'" class="empty_table">게시물이 없습니다.</td></tr>'; } ?>

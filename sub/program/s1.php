@@ -7,9 +7,9 @@ add_stylesheet('<link rel="stylesheet" href="/css/sub.css">', 0);
 <div class="s_pg s_program">
     <div class="s_bnr"></div>
     <ul class="p_location">
-        <li><a href="/"><img src="/img/sub/lo_home.jpg" alt=""></a></li>
-        <li><a href="#">인생미술관</a></li>
-        <li><a href="#">프로그램소개</a></li>
+        <li><img src="/img/sub/lo_home.jpg" alt=""></li>
+        <li>인생미술관</li>
+        <li>프로그램소개</li>
     </ul>
     <div class="contents">
         <div class="a1 wrapper mb210">

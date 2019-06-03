@@ -9,9 +9,9 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 1
 <div class="s_pg bo_pg s_<?php echo $bo_table ?>">
     <div class="s_bnr"></div>
     <ul class="p_location">
-        <li><a href="/"><img src="/img/sub/lo_home.jpg" alt=""></a></li>
-        <li><a href="#"><?php echo $board['bo_subject'] ?></a></li>
-        <li><a href="#">글쓰기</a></li>
+        <li><img src="/img/sub/lo_home.jpg" alt=""></li>
+        <li><?php echo $board['bo_subject'] ?></li>
+        <li>글쓰기</li>
     </ul>
     <div class="contents">
 
@@ -175,7 +175,7 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 1
 
 
     <div class="btn_confirm write_div">
-        <a href="./board.php?bo_table=<?php echo $bo_table ?>" class="btn_cancel btn">취소</a>
+        <a href="javascript:history.go(-1)" class="btn_cancel btn">취소</a>
         <input type="submit" value="작성완료" id="btn_submit" accesskey="s" class="btn_submit btn">
     </div>
     </form>
