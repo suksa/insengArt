@@ -2,8 +2,18 @@
 if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 
 // add_stylesheet('css 구문', 출력순서); 숫자가 작을 수록 먼저 출력됨
-add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0);
+add_stylesheet('<link rel="stylesheet" href="/css/sub.css">', 0);
+add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 1);
 ?>
+
+<div class="s_pg bo_pg s_<?php echo $bo_table ?>">
+    <div class="s_bnr"></div>
+    <ul class="p_location">
+        <li><a href="/"><img src="/img/sub/lo_home.jpg" alt=""></a></li>
+        <li><a href="#"><?php echo $board['bo_subject'] ?></a></li>
+        <li><a href="#">글쓰기</a></li>
+    </ul>
+    <div class="contents">
 
 <section id="bo_w">
     <h2 class="sound_only"><?php echo $g5['title'] ?></h2>
@@ -257,3 +267,4 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
     </script>
 </section>
 <!-- } 게시물 작성/수정 끝 -->
+</div></div>

@@ -37,12 +37,36 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
             <li><a href="#">Q&A</a></li>
         </ul>
         <nav class="lnb">
-            <ul>
+            <ul id="lnb">
                 <li><a href="/sub/intro/s1.php">인생미술관</a></li>
                 <li><a href="/sub/program/s1.php">프로그램 소개</a></li>
-                <li><a href="/bbs/board.php?bo_table=counsel&sca=체험수업">수강문의</a></li>
-                <li><a href="/bbs/board.php?bo_table=gallery&sca=작품소개">갤러리</a></li>
-                <li><a href="/bbs/board.php?bo_table=community&sca=공지사항">커뮤니티</a></li>
+                <li>
+                    <a href="/bbs/board.php?bo_table=counsel&sca=체험수업">수강문의</a>
+                    <div class="sub_mn">
+                        <ul>
+                            <li><a href="#"">체험수업 신청</a></li>
+                            <li><a href="#"">Q&A</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="/bbs/board.php?bo_table=gallery&sca=작품소개">갤러리</a>
+                    <div class="sub_mn">
+                        <ul>
+                            <li><a href="#"">작품소개</a></li>
+                            <li><a href="#"">수업스케치</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="/bbs/board.php?bo_table=community&sca=공지사항">커뮤니티</a>
+                    <div class="sub_mn">
+                        <ul>
+                            <li><a href="#"">공지사항</a></li>
+                            <li><a href="#"">인생미술관 소식</a></li>
+                        </ul>
+                    </div>
+                </li>
             </ul>
         </nav>
     </div>

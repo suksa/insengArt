@@ -5,7 +5,7 @@ body {}
 .bbs_wrap {position: relative;width: 1300px;margin: 0 auto;font-size: 15px}
 .tc {text-align: center;}
 
-#header {height:160px}
+#header {position: relative;height:160px;z-index: 100;}
 #header h1 {float:left;margin:26px 0 0 88px}
 
 .gnb {position: absolute;top: 10px;right: 100px}
@@ -14,11 +14,17 @@ body {}
 .gnb li+li a {padding: 0 0 0 25px}
 .gnb li+li a:before {content: '';position: absolute;top: 4px;left: 12px;width: 1px;height: 12px;background: #cacaca}
 
-.lnb {float: right;margin: 100px 85px 0 0}
-.lnb li {float: left}
-.lnb li+li {margin: 0 0 0 40px}
-.lnb li+li a {}
-.lnb li a {font-size: 18px}
+#lnb {float: right;margin: 100px 85px 0 0}
+#lnb > li {float: left;position: relative;}
+#lnb > li+li {margin: 0 0 0 40px}
+#lnb > li+li a {}
+#lnb > li > a {font-size: 18px;padding: 0 0 33px}
+#lnb > li.on .sub_mn {display: block}
+#lnb .sub_mn {position: absolute;top: calc(100% + 23px);left: calc(50% - 72px);display: none;border-top: 9px solid #be56a7}
+#lnb .sub_mn ul {width: 145px;}
+#lnb .sub_mn li {}
+#lnb .sub_mn li+li {border-top: 1px solid #fff}
+#lnb .sub_mn li a {display: block;font-size: 15px;background: #eaebf4;height: 45px;line-height: 45px;text-align: center}
 
 #footer {padding: 35px 0 45px;background:#f9f9f9;border-top:1px solid #e2e2e2;margin-top:90px}
 #footer:after {content:'';display:block;clear:both}

@@ -23,7 +23,9 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 1
     <ul class="p_location">
         <li><a href="/"><img src="/img/sub/lo_home.jpg" alt=""></a></li>
         <li><a href="#"><?php echo $board['bo_subject'] ?></a></li>
+        <?php if($sca){ ?>
         <li><a href="#"><?php echo $sca ?></a></li>
+        <?php } ?>
     </ul>
     <h3 class="bo_sjt"><?php echo $board['bo_subject'] ?></h3>
     <div class="contents">
@@ -160,7 +162,7 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 1
             <li><button type="submit" name="btn_submit" value="선택복사" onclick="document.pressed=this.value" class="btn btn_admin"><i class="fa fa-files-o" aria-hidden="true"></i> 선택복사</button></li>
             <li><button type="submit" name="btn_submit" value="선택이동" onclick="document.pressed=this.value" class="btn btn_admin"><i class="fa fa-arrows" aria-hidden="true"></i> 선택이동</button></li>
             <?php } ?>
-            <?php if ($list_href) { ?><li><a href="<?php echo $list_href ?>" class="btn_b01 btn"><i class="fa fa-list" aria-hidden="true"></i> 목록</a></li><?php } ?>
+            <!-- <?php if ($list_href) { ?><li><a href="<?php echo $list_href ?>" class="btn_b01 btn"><i class="fa fa-list" aria-hidden="true"></i> 목록</a></li><?php } ?> -->
             <?php if ($write_href) { ?><li><a href="<?php echo $write_href ?>" class="btn_b02 btn">글쓰기</a></li><?php } ?>
         </ul>
         <?php } ?>

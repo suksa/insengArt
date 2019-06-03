@@ -3,8 +3,20 @@ if (!defined("_GNUBOARD_")) exit; // 개별 페이지 접근 불가
 include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 
 // add_stylesheet('css 구문', 출력순서); 숫자가 작을 수록 먼저 출력됨
-add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0);
+add_stylesheet('<link rel="stylesheet" href="/css/sub.css">', 0);
+add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 1);
 ?>
+
+<div class="s_pg bo_pg s_<?php echo $bo_table ?>">
+    <div class="s_bnr"></div>
+    <ul class="p_location">
+        <li><a href="/"><img src="/img/sub/lo_home.jpg" alt=""></a></li>
+        <li><a href="#"><?php echo $board['bo_subject'] ?></a></li>
+        <?php if($sca){ ?>
+        <li><a href="#"><?php echo $sca ?></a></li>
+        <?php } ?>
+    </ul>
+    <div class="contents">
 
 <script src="<?php echo G5_JS_URL; ?>/viewimageresize.js"></script>
 
@@ -179,7 +191,7 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
         </ul>
 
         <ul class="bo_v_com">
-           <li><a href="<?php echo $list_href ?>" class="btn_b01 btn"><i class="fa fa-list" aria-hidden="true"></i> 목록</a></li>
+           <li><a href="<?php echo $list_href ?>&sca=<?php echo $view['ca_name'] ?>" class="btn_b01 btn"><i class="fa fa-list" aria-hidden="true"></i> 목록</a></li>
             <?php if ($reply_href) { ?><li><a href="<?php echo $reply_href ?>" class="btn_b01 btn"><i class="fa fa-reply" aria-hidden="true"></i> 답변</a></li><?php } ?>
             <?php if ($write_href) { ?><li><a href="<?php echo $write_href ?>" class="btn_b02 btn"><i class="fa fa-pencil" aria-hidden="true"></i> 글쓰기</a></li><?php } ?>
         </ul>
