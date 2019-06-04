@@ -2,7 +2,7 @@
 
 /* 초기화 */
 html {overflow-y:scroll;height:100%;min-width:320px}
-body {margin:0;padding:0;font-size:0.75em;background:#e6e6e6;height:100%}
+body {margin:0;padding:0;font-size:0.75em;height:100%}
 html, h1, h2, h3, h4, h5, h6, form, fieldset, img {margin:0;padding:0;border:0}
 h1, h2, h3, h4, h5, h6 {font-size:1em}
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display:block}
@@ -35,14 +35,14 @@ ul,li,dl,dt,dd{list-style:none;padding:0;margin:0}
 .hd_pops_footer button {margin-right:5px;padding:5px 10px;border:0;background:#393939;color:#fff}
 
 /* 상단 레이아웃 */
-#hd {position:relative;background:#333}
+#hd {position:relative;background:#fff}
 #hd:after {display:block;visibility:hidden;clear:both;content:""}
 #hd_h1 {position:absolute;font-size:0;text-indent:-9999em;line-height:0;overflow:hidden}
 
-#logo {padding:10px 10px;height:50px;text-align:center}
+#logo {padding:5px 10px;height:60px;text-align:center}
 #logo img{vertical-align:middle;max-height:100%;width:auto}
-#gnb_open {position:absolute;top:10px;left:10px;padding:0 10px;height:30px;width:30px;border:0;background-size:70%;color:#fff;background:none; font-size: 16px;}
-#gnb {display:none;background:#262626;position:fixed;top:0;left:0;z-index:99999;height:100%;overflow-y:auto;width:300px;
+#gnb_open { position: absolute;top: 10px;right: 10px;padding: 0 10px;height: 40px;width: 35px;border: 0;color: #fff;background: url(/img/m/common/head_menu.png) no-repeat center;background-size: 70%;font-size: 16px;}
+#gnb {display:none;background:#262626;position:fixed;top:0;right:0;z-index:99999;height:100%;overflow-y:auto;width:300px;
 -webkit-box-shadow:0 0 5px  rgba(55,55,5,0.4);
 -moz-box-shadow:0 0 5px  rgba(55,55,5,0.4);
 box-shadow: 0 0 5px  rgba(55,55,5,0.4);}
@@ -322,3 +322,13 @@ box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.2);}
 .pg_next {background:url(../img/btn_next.gif) no-repeat 50% 50% #fff;width:30px;height:30px ;text-indent:-999px;overflow:hidden}
 .pg_end {background:url(../img/btn_end.gif) no-repeat 50% 50% #fff;width:30px;height:30px ;text-indent:-999px;overflow:hidden}
 .pg_current {display:inline-block;background:#4c4f6f;color:#fff;font-weight:normal;border-radius:3px;line-height:30px;}
+
+.rsp_img {max-width: 100%;height: auto}
+.main__program {background: #ebebeb;padding: 8.4% 0}
+.main__program h3 {width: 62%;height: auto;margin: 0 auto}
+.main__program-cont {padding: 0 8.5%}
+.main__program-cont a {display: block;padding-bottom: 54%;margin: 6.1% 0 0}
+.main__program-cont a:hover {background-position: 100% 0}
+.main__program-cont .c1 {background: url(/img/m/main/hv_img1.jpg) no-repeat;background-size: 200%}
+.main__program-cont .c2 {background: url(/img/m/main/hv_img2.jpg) no-repeat;background-size: 200%}
+.main__program-cont .c3 {background: url(/img/m/main/hv_img3.jpg) no-repeat;background-size: 200%}
