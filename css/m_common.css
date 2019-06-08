@@ -1,7 +1,21 @@
 body {position: relative;max-width: 760px;margin: 0 auto;font-family:'Spoqa Han Sans', dotum, sans-serif}
 .rsp_img {max-width: 100%;height: auto}
-.main__program {background: #ebebeb;padding: 8.4% 0}
-.main__program h3 {width: 62%;height: auto;margin: 0 auto}
+
+.main__bnr-group {padding: 40px 25px}
+.main__bnr-group a {display: block;}
+.main__bnr-group a + a {margin: 50px  0 0}
+.main__bnr-group .c2 {text-align: right}
+.main__bnr-group h3 {margin: 0 0 25px;padding: 20px 0 0;font-size: 23px;color: #282828;line-height: 27px;font-weight: 400;}
+.main__bnr-group p {font-size: 15px;color: #9b9b9b;margin: 0 0 15px;}
+.main__bnr-group p:after {content: '';position: relative;top: 7px;background: url(/img/mobile/main/arr2.png) no-repeat center;background-size: cover;width: 28px;height: 8px;display: inline-block;margin: 0 0 0 15px}
+.main__bnr-group .c2 p:before {content: '';position: relative;top: 7px;background: url(/img/mobile/main/arr3.png) no-repeat center;background-size: cover;width: 28px;height: 8px;display: inline-block;;margin: 0 15px 0 0}
+.main__bnr-group .c2 p:after {content: none}
+
+
+.main__program {background: #ebebeb;padding: 8.4% 0;text-align: center}
+.main__program h3 {font-size: 21px;color: #555;font-weight: 400;margin: 0 0 8px}
+.main__program h3 b {color:#be56a7}
+.main__program p {margin: 0 0 20px;font-size: 14px;color:#666;padding: 0 10px}
 .main__program-cont {padding: 0 8.5%}
 .main__program-cont a {display: block;padding-bottom: 54%;margin: 6.1% 0 0}
 .main__program-cont a:hover {background-position: 100% 0}
@@ -9,8 +23,9 @@ body {position: relative;max-width: 760px;margin: 0 auto;font-family:'Spoqa Han 
 .main__program-cont .c2 {background: url(/img/mobile/main/hv_img2.jpg) no-repeat;background-size: 200%}
 .main__program-cont .c3 {background: url(/img/mobile/main/hv_img3.jpg) no-repeat;background-size: 200%}
 
-.main__story {position: relative;}
-.main__story > h3 {width: 71%;height: auto;margin:0 auto;padding:10% 0}
+.main__story {position: relative;text-align: center;}
+.main__story h3 {font-size: 21px;color: #555;font-weight: 400;padding: 35px 0 10px;margin: 0 0 8px;text-align: center;}
+.main__story h3 b {color:#be56a7}
 .main__story .per_view {position: relative;}
 .main__story .per_view .swiper-container {width: 74%}
 .main__story .per_view .txt {position: absolute;left: 0;bottom: 0;width: 100%;height: 90px;background: rgba(0,0,0,.6);color:#fff;padding: 15px}
@@ -19,7 +34,8 @@ body {position: relative;max-width: 760px;margin: 0 auto;font-family:'Spoqa Han 
 .main__story .per_view .bg {background-position: center;background-repeat: no-repeat;background-size: cover;width: 100%;height: 300px}
 .main__story .swiper-button-next,
 .main__story .swiper-button-prev {display: none}
-.main__story .story_btn {width: 57%;margin:9% auto;display: block;}
+.main__story .story_btn {margin: 9% 0;display: inline-block;border: 1px solid #dcdcdc;padding: 11px 30px;text-align: center;color: #999;font-size:13px}
+.main__story .story_btn img {margin: 0 0 0 10px}
 .main__story .arr_clone {position: absolute;top: 50%;left: 0;width: 100%;}
 .main__story .arr_clone .sw_next,
 .main__story .arr_clone .sw_prev {position: absolute;cursor: pointer;width: 2.7%;height: auto;transform: translateY(-50%)}

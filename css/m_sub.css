@@ -1,6 +1,6 @@
 #ft {margin-top:11.8%}
 .contents {position: relative}
-.s_bnr {height: 280px;background-size: cover;background-position: center;background-repeat: no-repeat}
+.s_bnr {height: 240px;background-size: cover;background-position: center;background-repeat: no-repeat}
 .intro_pg .s_bnr {background-image: url(/img/mobile/sub/s_bnr_intro.jpg)}
 .s_program .s_bnr {background-image: url(/img/mobile/sub/s_bnr_program.jpg)}
 .s_counsel .s_bnr {background-image: url(/img/mobile/sub/s_bnr_counsel.jpg)}
@@ -15,8 +15,28 @@
 .p_location li+li {padding: 0 0 0 30px}
 .p_location li+li:before {content: ''; position: absolute; left: 12px; top: 15px; width: 7px; height: 14px; background: url(/img/sub/lo_dash.jpg); background-size: cover;}
 
-.intro_pg .a2 {padding: 12.5% 0 4.6%}
-.intro_pg .a3 {padding: 0 0 12.5%}
+.intro_pg .h_sjt { background: url(../../../../img/sub/subejct_bg.png) no-repeat center;height: 55px;margin: 30px auto 35px;font-size: 24px;color: #525252;font-weight: 400;text-align: center;line-height: 43px;background-size: contain;}
+.intro_pg .a1 {background: #f9f9f9;padding: 1px 1px 35px;text-align: center;}
+.intro_pg .a1 p {font-size: 15px;line-height: 18px;color:#656565}
+.intro_pg .a2 {overflow: hidden;padding: 0 20px 20px;}
+.intro_pg .a2 .c {text-align: center;border: 1px solid #ddd;border-bottom: 2px solid #be56a7;padding: 0 15px 30px}
+.intro_pg .a2 .c2 .p1 {font-weight: 700}
+.intro_pg .a2 h3 {padding: 30px 0px 20px;}
+.intro_pg .a2 .p1 {font-size: 14px;color:#999;margin: 0 0 15px}
+.intro_pg .a2 .p2 {font-size: 14px;color:#999}
+.intro_pg .a2 .c1 {margin: 0 0 25px}
+.intro_pg .a2 .c1 a { display: inline-block;width: 175px;height: 35px;line-height: 33px;border: 1px solid #be56a7;font-size: 14px;color: #999;}
+.intro_pg .a3 {padding: 40px 0 0}
+.intro_pg .a3 li {position: relative;padding: 20px}
+.intro_pg .a3 h3 {margin: 0 0 10px;text-align: center;}
+.intro_pg .a3 h4 {position: relative;font-size: 20px;line-height: 22px;color: #777;font-weight: 400;border-bottom: 1px solid #ddd;padding: 20px 0 15px;margin: 0 0 10px}
+.intro_pg .a3 h4:before {content: '';position: absolute;left: 0;bottom: -2px;width: 46px;height: 3px;background: #be56a7}
+.intro_pg .a3 h4 span {display: block;color: #ccc;font-size: 13px;letter-spacing: 0}
+.intro_pg .a3 li > img {}
+.intro_pg .a3 li.r > img {left: auto;right: 0}
+.intro_pg .a3 li.r > .txt {margin-left: 0}
+.intro_pg .a3 .txt {}
+.intro_pg .a3 p {font-size: 14px;line-height: 19px;color: #999}
 
 .s_program .a1 {margin:0 0 10%}
 

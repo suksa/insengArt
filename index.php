@@ -24,14 +24,29 @@ add_stylesheet('<link rel="stylesheet" href="/css/main.css">', 0);
         <img src="/img/main/scroll_down.png" alt="" class="sc_down">
     </div>
     <article class="a1">
-        <a href="#" class="c1"><img src="/img/main/bnr1_1.png" alt=""></a>
-        <a href="#" class="c2"><img src="/img/main/bnr1_2.png" alt=""></a>
-        <a href="#" class="c3"><img src="/img/main/bnr1_3.png" alt=""></a>
+        <div class="wrapper">
+            <a href="#" class="c1">
+                <h3>모두가 한 번쯤은 꿈꿔온<br>나만의 힐링시간.</h3>
+                <p>직장인,주부 취미미술을 위한 Gold ART</p>
+                <img src="/img/main/bnr1_1.jpg" alt="">
+            </a>
+            <a href="#" class="c1 c2">
+                <h3>작은 변화가<br>행복한 노후를 만듭니다.</h3>
+                <p>우울증, 노인 취미미술을 위한 Silver ART</p>
+                <img src="/img/main/bnr1_2.jpg" alt="">
+            </a>
+            <a href="#" class="c1">
+                <h3>몸과 마음을 회복하는<br>시간을 가져보세요.</h3>
+                <p>산후 우울증 개선, 교감을 위한 태교미술</p>
+                <img src="/img/main/bnr1_3.jpg" alt="">
+            </a>
+        </div>
     </article>
     <article class="a2">
         <div class="wrapper">
             <div class="txt">
-                <img src="/img/main/txt_1.png" alt="" class="intro">
+                <h3><b>인생미술관 </b>프로그램 소개</h3>
+                <p>몸과 마음, 생각의 쉼까지 미술로 온전한 휴식을 취하며 힐링하는 시간을 선사합니다.</p>
                 <a href="#"><img src="/img/main/detail_1.png" alt=""></a>
             </div>
             <ul class="hv">
@@ -63,86 +78,29 @@ add_stylesheet('<link rel="stylesheet" href="/css/main.css">', 0);
         </div>
     </article>
     <article class="a3">
-        <h3><img src="/img/main/txt_story.png" alt=""></h3>
-        <div class="per_view">
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <a href="#">
-                            <div class="bg" style="background-image:url(/img/main/ex_img1.jpg)"></div>
-                            <div class="txt">
-                                <h4>인생미술관 갤러리 사진</h4>
-                                <p>2019-01-01</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="#">
-                            <div class="bg" style="background-image:url(/img/main/ex_img1.jpg)"></div>
-                            <div class="txt">
-                                <h4>인생미술관 갤러리 사진</h4>
-                                <p>2019-01-01</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="#">
-                            <div class="bg" style="background-image:url(/img/main/ex_img1.jpg)"></div>
-                            <div class="txt">
-                                <h4>인생미술관 갤러리 사진</h4>
-                                <p>2019-01-01</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="#">
-                            <div class="bg" style="background-image:url(/img/main/ex_img1.jpg)"></div>
-                            <div class="txt">
-                                <h4>인생미술관 갤러리 사진</h4>
-                                <p>2019-01-01</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="#">
-                            <div class="bg" style="background-image:url(/img/main/ex_img1.jpg)"></div>
-                            <div class="txt">
-                                <h4>인생미술관 갤러리 사진</h4>
-                                <p>2019-01-01</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <script>
-                var swiper = new Swiper('.swiper-container', {
-                    slidesPerView: 5,
-                    spaceBetween: 35,
-                    loop: true,
-                    autoplay: {
-                        delay: 3000,
-                        disableOnInteraction: false,
-                    },
-                    breakpoints: {
-                        1800: {
-                            slidesPerView: 4,
-                            spaceBetween: 35,
-                        },
-                        1400: {
-                            slidesPerView: 3,
-                            spaceBetween: 35,
-                        }
-                      }
-                });
-            </script>
-        </div>
+        <h3>
+           <b>‘인생미술관’ </b>에서 함께한 이야기들
+        </h3>
+        <?php echo latest('story','gallery',30,10) ?>
         <div class="tc">
-            <a href="#"><img src="/img/main/btn_detail_2.jpg" alt=""></a>
+            <a href="/bbs/board.php?bo_table=gallery&sca=수업스케치"><img src="/img/main/btn_detail_2.jpg" alt=""></a>
         </div>
     </article>
     <article class="a4 wrapper">
-        <a href="#"><img src="/img/main/double_bnr_1.jpg" alt="" class="l"></a>
-        <a href="#"><img src="/img/main/double_bnr_2.jpg" alt="" class="r"></a>
+        <a href="#" class="l">
+            <span class="c c1">
+                <span>체험수업으로 시작해보세요.</span>
+                <span>예술은 당신의 가장 가까운 곳에 있습니다.</span>
+            </span>
+            <img src="/img/main/double_bnr_1.jpg" alt="">
+        </a>
+        <a href="#" class="r">
+            <span class="c c2">
+                <span>궁금한 점을 알려드립니다.</span>
+                <span>‘인생을 그리다’에 궁금한 점을 남겨주세요.</span>
+            </span>
+            <img src="/img/main/double_bnr_2.jpg" alt="">
+        </a>
     </article>
 </div>
 
